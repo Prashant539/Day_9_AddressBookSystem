@@ -100,7 +100,28 @@ namespace AddressBook
                 }
             }
         }
+        public static void DeleteContact()
+        {
+            Contacts contacts = new Contacts();
+
+            Console.WriteLine("Enter the First Name of the Person to be deleted: ");
+            string name = Console.ReadLine();
+            foreach (var data in person)
+            {
+                if (person.Contains(data))
+                {
+                    if (data.FName == name)
+                    {
+                        Console.WriteLine();
+                        person.Remove(contacts);
+                        return;
+                    }
+                }
+            }
+        }
     }
 }
+
+
 
 
